@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    background-image: url('../icon/Plan\ de\ travail\ 1\ copie\ 1-100.jpg');
+}
+.layout{
+    background: #ffffff1f;
+}
+#grid{
+    width: 100%;
+    height:100vh;
+    display: grid;
+    grid-template-areas:    "head head mod"
+                            "side main stat"
+                            "side foot foot";
+    grid-template-rows: 49px auto 26px;
+    grid-template-columns: 150px auto 50px;
+    grid-gap: 5px 5px;
+}
+#header{
+    background: #ffffff25;
+    grid-area: head;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.836);
+    border-radius: 0 0 5px 0;
+    backdrop-filter: saturate(200%) blur(1px) brightness(150%); 
+    
+}
+
+#footer{
+    background: #ffffff28;
+    grid-area: foot;
+    border-radius: 5px 0 0 0;
+    backdrop-filter: saturate(200%) blur(2px); 
+}
+#status{
+    background: #ffffff18;
+    grid-area: stat;
+}
+#sidebar{
+    background: #ffffff13;
+    grid-area: side;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.534);
+    border-radius: 0 5px  0 0;
+    backdrop-filter: blur(1px) brightness(150%);
+}
+.main{
+    grid-area: main;
+    background: #ffffff18;
+    height: calc(100vh - 85px);
+    overflow:scroll;
+    scrollbar-width: none;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.534);
+    border-radius: 5px;
+    backdrop-filter: blur(3px);
+    box-sizing: border-box;
+    padding: 20px;
+}
+#modal{
+    grid-area:mod;
+}
+.main div {
+    margin-top: 10%;
+    margin-left: 10px;
+    
+}
+::-webkit-scrollbar{
+    display: none;
+}
+#sidebar:hover{
+    
+}
